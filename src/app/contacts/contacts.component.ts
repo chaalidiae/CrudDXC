@@ -18,6 +18,7 @@ export class ContactsComponent implements OnInit {
   constructor(public http: Http, public contactsservice: ContactsService, public router: Router) { }
 
   ngOnInit(): void {
+    this.doSearch();
   }
   doSearch() {
     this.contactsservice.getContacts(this.motCle, this.currentpage, this.size)
