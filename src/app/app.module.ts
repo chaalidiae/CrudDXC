@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms';
 import { NewContactComponent } from './new-contact/new-contact.component';
 import { NouveauContactComponent } from './nouveau-contact/nouveau-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 // tslint:disable-next-line:one-variable-per-declaration
 const appRoutes: Routes = [
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     AboutComponent,
     NewContactComponent,
     NouveauContactComponent,
-    EditContactComponent
+    EditContactComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
