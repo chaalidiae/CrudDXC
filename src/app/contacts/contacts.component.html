@@ -1,6 +1,8 @@
 <div class="container-fluid spacer">
   <div class="form-group">
-    <label>Rechercher:</label>
+    <select [(ngModel)]="column">
+      <option *ngFor="let index of ['nom', 'prenom', 'email', 'tel']" ngValue="{{index}}">{{index}}</option>
+    </select>
     <input class="rightspacer" type="text" [(ngModel)]="motCle"/>
     <button class="btn btn-outline-primary rightspacer" (click)="chercher()">Chercher</button>
   </div>

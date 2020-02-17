@@ -7,9 +7,9 @@ export class ContactsService {
   port = '8080';
   constructor(public http: Http) {
   }
-  getContacts(motCle: string, page: number, size: number ) {
-
-    return this.http.get('http://localhost:' + this.port + '/chercherContact?mc=' + motCle + '&size=' + size + '&page=' + page)
+  getContacts(motCle: string, page: number, size: number, column: string) {
+    return this.http.get('http://localhost:' + this.port +
+      '/chercherContact?mc=' + motCle + '&size=' + size + '&page=' + page + '&column=' + column)
       .pipe(map(resp => resp.json()));
   }
   saveContact(contact: Contact) {

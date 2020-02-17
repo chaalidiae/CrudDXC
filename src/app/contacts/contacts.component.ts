@@ -12,6 +12,7 @@ import {Contact} from '../../model/model.contact';
 export class ContactsComponent implements OnInit {
   pageContacts: any;
   motCle = '';
+  column = '';
   currentpage = 0;
   size = 5;
   pages: any;
@@ -21,7 +22,7 @@ export class ContactsComponent implements OnInit {
     this.doSearch();
   }
   doSearch() {
-    this.contactsservice.getContacts(this.motCle, this.currentpage, this.size)
+    this.contactsservice.getContacts(this.motCle, this.currentpage, this.size, this.column)
       .subscribe(data => {
         this.pageContacts = data;
         this.pages = new Array(data.totalPages);
