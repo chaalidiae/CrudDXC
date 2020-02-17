@@ -13,6 +13,7 @@ import { NewContactComponent } from './new-contact/new-contact.component';
 import { NouveauContactComponent } from './nouveau-contact/nouveau-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 // tslint:disable-next-line:one-variable-per-declaration
 const appRoutes: Routes = [
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     HttpModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule
   ],
   providers: [
     ContactsService

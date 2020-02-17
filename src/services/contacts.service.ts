@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import { map } from 'rxjs/operators';
 import {Contact} from '../model/model.contact';
+import { NgxSpinnerService } from 'ngx-spinner';
 @Injectable()
 export class ContactsService {
   port = '8080';
