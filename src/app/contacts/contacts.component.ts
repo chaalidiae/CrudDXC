@@ -56,6 +56,7 @@ export class ContactsComponent implements OnInit {
         this.pageContacts.content.splice(
           this.pageContacts.content.indexOf(c), 1
         );
+        this.doSearch();
       }, error => {
         console.log(error);
       });
