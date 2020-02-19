@@ -16,7 +16,11 @@ export class ContactsComponent implements OnInit {
   currentpage = 0;
   size = 5;
   pages: any;
-  constructor(public http: Http, public contactsservice: ContactsService, public router: Router) { }
+  constructor(public http: Http, public contactsservice: ContactsService, public router: Router) { 
+
+    
+  }
+  
 
   ngOnInit(): void {
     this.doSearch();
@@ -25,8 +29,10 @@ export class ContactsComponent implements OnInit {
     this.contactsservice.getContacts(this.motCle, this.currentpage, this.size, this.column)
       .subscribe(data => {
         this.pageContacts = data;
+        console.log(this.pageContacts);
         this.pages = new Array(data.totalPages);
       }, error => {console.log(error); });
+      
   }
   chercher() {
     this.currentpage = 0;

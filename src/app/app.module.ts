@@ -13,6 +13,10 @@ import { NewContactComponent } from './new-contact/new-contact.component';
 import { NouveauContactComponent } from './nouveau-contact/nouveau-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { DataTableComponent } from './data-table/data-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 // tslint:disable-next-line:one-variable-per-declaration
 const appRoutes: Routes = [
@@ -31,13 +35,17 @@ const appRoutes: Routes = [
     NewContactComponent,
     NouveauContactComponent,
     EditContactComponent,
-    NavBarComponent
+    NavBarComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     HttpModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [
     ContactsService
