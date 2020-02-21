@@ -25,7 +25,10 @@ export class EditContactComponent implements OnInit {
     );
   }
   updateContact() {
-    this.contactsService.updateContact(this.contact).subscribe(data => {
+
+    const confirm = window.confirm('Est vous sure ?');
+    if (confirm === true) {
+      this.contactsService.updateContact(this.contact).subscribe(data => {
         console.log(data);
         alert('Mise à jour effectuée !');
         this.router.navigate(['contacts']);
@@ -33,6 +36,9 @@ export class EditContactComponent implements OnInit {
         console.log(error);
       }
     );
+    }
+
+    
   }
 
 }
