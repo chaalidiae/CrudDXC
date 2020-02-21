@@ -13,9 +13,7 @@ import { NewContactComponent } from './new-contact/new-contact.component';
 import { NouveauContactComponent } from './nouveau-contact/nouveau-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 // tslint:disable-next-line:one-variable-per-declaration
 const appRoutes: Routes = [
@@ -41,9 +39,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     HttpModule,
     FormsModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
+    NgxSpinnerModule
   ],
   providers: [
     ContactsService
