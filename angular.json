@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "crudDXC": {
@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,15 @@
           }
         }
       }
-    }},
-  "defaultProject": "crudDXC"
+    }
+  },
+  "defaultProject": "crudDXC",
+  "cli": {
+    "analytics": "9d28095a-7ffb-4525-9bb4-ae056f9d2856"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
